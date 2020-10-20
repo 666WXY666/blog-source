@@ -1,0 +1,352 @@
+if hexo-config('plugins.backstretch.position') == 'fixed'
+  .backstretch
+    background-color: #282c34 !important
+  .backstretch-item
+    display: none !important
+else
+  #l_body
+    background-color: black !important
+img
+  filter: brightness(convert(hexo-config('color_scheme.dark.brightness'))) !important
+.lazyload
+  filter: brightness(convert(hexo-config('color_scheme.dark.brightness'))) !important
+.pdf
+  filter: brightness(convert(hexo-config('color_scheme.dark.brightness'))) !important
+//header
+#wrapper .title
+  color: var(--color-meta)
+.l_header ul.nav-list-h>li>a, ul.list-v >li>a
+  color: var(--color-list)
+.blur
+  background: var(--color-site-bg) !important
+.nav-main
+  .u-search-input
+    background: var(--color-card) !important
+.l_main .article .prev-next>a
+  background: var(--color-block)
+  &:hover
+    background: var(--color-card)
+.article blockquote
+  background: var(--color-block)
+.article-title a
+  color: var(--color-h1)
+details>summary
+  color: var(--color-p)
+  background: var(--color-site-bg)
+details
+  border: 1px solid var(--color-site-bg)
+  background: var(--color-site-bg)
+//search
+#u-search .modal
+  background: var(--color-card) !important
+#u-search .modal-header
+  background: var(--color-card) !important
+#u-search .modal-body
+  background: var(--color-card) !important
+#u-search .modal-body .modal-results .result:hover
+  background: var(--color-block) !important
+//phone search
+.l_header .m_search
+  @media screen and (max-width: $device-mobile)
+    background: var(--color-site-bg) !important
+//side
+.widget.blogger .content .social-wrapper a.social:hover
+  background: var(--color-card)
+.content
+  color: var(--color-p)
+.note
+  background: var(--color-block) !important
+div.tabs ul.nav-tabs li.tab.active a
+  color: var(--color-p)
+  background: var(--color-card)
+kbd
+  background: var(--color-block) !important
+.cover-wrapper.dock .menu .list-h a:hover, .cover-wrapper.featured .menu .list-h a:hover, .cover-wrapper.focus .menu .list-h a:hover
+  color: var(--color-text) !important
+//highlight
+.gutter
+  background: var(--color-site-bg) !important
+  background-color: var(--color-site-bg) !important
+.highlight figcaption
+  background-color: #21252b
+.highlight pre .line, .highlight pre .params
+  color: rgba(158, 142, 142, 0.9)
+//table
+*:not(.highlight) >table tr
+  background-color: var(--color-card)
+*:not(.highlight) >table th
+  background: var(--color-site-bg)
+*:not(.highlight) table td,*:not(.highlight) table th
+  border-color: var(--color-site-bg)
+*:not(.highlight) >table tr:hover
+  background: var(--color-codeblock)
+.timenode .highlight
+  border-color: var(--color-site-bg) !important
+blockquote p
+  color: var(--color-p)
+// tags
+#archive-page .archive .all-tags ul li span
+  color: var(--color-text)
+  background: #6f6f72
+if hexo-config('comments.service')=='gitalk'
+  .gt-container .gt-header-textarea
+    background-color: var(--color-card)
+    &:hover
+      background-color: var(--color-block)
+  .gt-container .gt-comment-content
+    background-color: var(--color-card)
+    &:hover
+      box-shadow: none
+  .gt-container .gt-comment-admin .gt-comment-content
+    background-color: var(--color-card)
+if hexo-config('comments.service')=='minivaline'
+  .MiniValine .vpage .more
+    background: var(--color-site-bg)
+  .MiniValine .vlist .vcard .vcomment-body .text-wrapper .vcomment.expand:before
+    background: linear-gradient(180deg, rgba(246,246,246,0), rgba(0,0,0,0.9))
+  .MiniValine .vlist .vcard .vcomment-body .text-wrapper .vcomment.expand:after
+    background: rgba(0,0,0,0.9)
+  .MiniValine .vlist .vcard .vcomment-body .text-wrapper .vcomment pre
+    background: var(--color-site-bg)
+    border: 1px solid var(--color-site-bg)
+  .MiniValine .vinputs-area .vextra-area .vsmile-icons
+    background: transparent
+  .MiniValine .vlist .vcard .vcomment-body .vhead
+    filter: brightness(85%)
+  .MiniValine .vbtn
+    background: var(--color-card)
+    &:hover
+      background: var(--color-block)
+  .MiniValine .vpage .more:hover
+    background: var(--color-card)
+if hexo-config('plugins.aplayer.enable')
+  .aplayer
+    background: var(--color-site-bg)
+  .aplayer .aplayer-list ol li:hover
+    background: rgba($color-theme,.2)
+  .aplayer .aplayer-list ol li.aplayer-list-light
+    background: var(--color-block)
+  .aplayer-info
+    background: var(--color-site-bg) !important
+  .aplayer .aplayer-lrc:before
+    background: linear-gradient(180deg,#282c34 0,hsla(0,0%,100%,0))
+  .aplayer .aplayer-lrc:after
+    background: linear-gradient(180deg,hsla(0,0%,0%,0) 0,hsla(0,0%,13%,.8))
+  .aplayer-pic
+    filter: brightness(convert(hexo-config('color_scheme.dark.brightness')))
+  .aplayer .aplayer-list ol li
+    border-top: 1px solid var(--color-card)
+  .aplayer.aplayer-withlist .aplayer-info
+    border-bottom: 1px solid var(--color-block)
+if hexo-config('comments.service')=='valine'
+  #valine_container button
+    background-color: var(--color-block) !important
+  #valine_container .vcards .vcontent.expand:before
+    background: none !important
+  #valine_container .vcards .vcontent.expand:after
+    background:  #393c40 !important
+  .v[data-class=v] code, .v[data-class=v] pre
+    background-color: #332828 !important
+
+// 自定义修改区域
+// custom暗黑主题配色
+$custom-hover-color = #44d7b6
+$custom-default-color = #fff
+$custom-underline-color = #4a4a4a
+
+/* 首页向下滚动图标颜色 */
+.cover-wrapper #scroll-down .scroll-down-effects {
+  color: $custom-default-color;
+}
+
+/* 小组件样式 */
+if hexo-config('widgetHeader.enable') {
+  .widget header.pure {
+    color: var(--color-list);
+    background: var(--color-site-bg) !important;
+  }
+  .widget header.pure .rightBtn {
+    color: var(--color-list);
+  }
+}
+
+/* 评论样式 */
+#veditor {
+  filter: brightness(convert(hexo-config('color_scheme.dark.brightness'))) !important
+}
+
+article#comments #valine_container .vwrap .vheader .vinput{
+  border-bottom: 1px dashed var(--color-list);
+}
+
+article#comments #valine_container .vwrap .vheader .vinput:hover{
+  border-bottom: 1px dashed $custom-default-color;
+}
+
+article#comments #valine_container .vwrap{
+  border: 1px dashed var(--color-list);
+}
+
+article#comments #valine_container .vwrap:hover{
+  border: 1px dashed $custom-default-color;
+}
+
+#valine_container .vcards .vcard {
+  border: 1px dashed var(--color-list);
+}
+
+#valine_container .vcards .vcard:hover {
+  border: 1px dashed $custom-default-color;
+}
+
+/* 评论按钮样式 */
+article#comments #valine_container button:hover {
+  color: $custom-default-color;
+  background: alpha($custom-default-color, .1) !important;
+}
+
+/* 评论回复按钮样式 */
+.v .vcards .vcard .vh .vmeta .vat{
+  border: 1px solid var(--color-list) !important;
+}
+
+article#comments #valine_container .vcards .vmeta .vat {
+  color: var(--color-list);
+}
+
+article#comments #valine_container .vcards .vmeta .vat:hover {
+  color: $custom-default-color;
+  border: 1px solid $custom-default-color !important;
+  background: alpha($custom-default-color, .1) !important;
+  text-decoration: none;
+}
+
+.v[data-class=v] .vicon {
+  fill: var(--color-list);
+}
+
+/* 表情hover样式 */
+article#comments #valine_container .vwrap .vemojis i:hover, article#comments #valine_container .vwrap .vpreview i:hover {
+  background: var(--color-list);
+  box-shadow: unset;
+}
+
+/* 表情、预览选中样式 */
+article#comments #valine_container .vwrap .vedit span.actived {
+  fill: $custom-default-color;
+}
+
+/* 自定义文章footer hr样式 */
+.l_main .post .article-meta#bottom hr {
+  border: 2px dashed var(--color-list);
+}
+
+.l_main .post .article-meta#bottom hr:before {
+  color: $custom-default-color;
+}
+
+/* botui对话框样式 */
+#hello-xuxuy {
+  filter: brightness(convert(hexo-config('color_scheme.dark.brightness'))) !important
+}
+
+/* tabs样式 */
+div.tabs{
+  border: 1px solid alpha($color-p, .5)
+}
+
+/* 小组件文章分类样式调整 */
+.widget >.content ul.entry a .badge {
+  color: unset;
+}
+
+/* 有序列表 */
+.md ol > li:before{
+  color: var(--color-site-bg);
+  background-color: var(--color-list);
+}
+/* 无序列表 */
+.md ul li:before{
+  border: 0.2rem solid var(--color-list);
+  background: $custom-default-color;
+}
+
+.md ul > li:hover:before {
+  border-color: var(--color-list);
+}
+
+/* 代码块滚动条样式 */
+.highlight >table::-webkit-scrollbar-thumb {
+  background: $color-theme;
+}
+
+/* 相关文章滚动条样式 */
+.md .footer .related_posts .body .vlts-rps:hover::-webkit-scrollbar-thumb {
+  background: $color-theme;
+}
+
+/* 文章底部打赏样式 */
+#github {
+  opacity: 0.5;
+}
+
+#RewardText, #RewardBox {
+  filter: brightness(convert(hexo-config('color_scheme.dark.brightness'))) !important
+}
+
+/* 页脚底部样式 */
+#footer-content {
+  color: var(--color-list)
+}
+
+/* 彩色Github条 */
+.github-badge {
+  filter: brightness(convert(hexo-config('color_scheme.dark.brightness'))) !important
+}
+
+/* 关于页面打赏样式 */
+.single-reward .reward-main .lazyload {
+  filter: unset !important;
+}
+
+/* 文章h1,h2样式 */
+.article h1, .article h2 {
+  border-bottom: 1px solid $custom-underline-color;
+}
+
+/* 一言样式 */
+.poem-wrap h1 {
+  border-bottom: none;
+}
+
+/* 文章列表页下划线样式 */
+.meta-v3[line_style='dashed'] {
+  border-top: 2px dashed $custom-underline-color;
+}
+
+/* 围住小猫样式 */
+#catch-the-cat {
+  filter: brightness(convert(hexo-config('color_scheme.dark.brightness'))) !important
+}
+
+/* 更好的title样式 */
+.milky {
+  filter: brightness(convert(hexo-config('color_scheme.dark.brightness'))) !important
+}
+
+/* 彩色标签开启时显示样式 */
+if hexo-config('tagsColor.enable') {
+  article#tag .all-tags ul li a {
+    color: var(--color-list) !important;
+    background: var(--color-block) !important;
+  }
+
+  article#tag .all-tags ul li a:hover {
+    background: $color-hover !important;
+    color: $color-inner !important;
+  }
+
+  article#tag .all-tags ul li:hover {
+    box-shadow: unset;
+  }
+}

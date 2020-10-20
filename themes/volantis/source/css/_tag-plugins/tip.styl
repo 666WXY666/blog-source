@@ -1,0 +1,91 @@
+div.tip
+  position: relative;
+  color: #fff;
+  background: linear-gradient(to right, #0092ff, #20b8ff);
+  padding: 6px 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  p
+    margin: 5px 0 !important;
+  &:hover
+    -webkit-animation: horizontal 2s ease infinite;
+    animation: horizontal 2s ease infinite;
+  &::before
+    background: linear-gradient(to right, #0092ff, #20b8ff);
+    border-radius: 50%;
+    color: #fff;
+    font-size: 12px;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    line-height: 24.5px;
+    left: -12px;
+    top: -12px;
+    box-shadow: 0 0 0 2.5px #fff;
+    font-weight: 600;
+    font-family: "Font Awesome 5 Free";
+    text-align: center;
+    content: '\f054'
+
+  &.success
+  &.success::before
+    content: '\f00c'
+    background: linear-gradient(to right, #00cdac, #8ddad5);
+  &.info
+  &.info::before
+    content: '\f129'
+    background: linear-gradient(560deg, #bccdd2, #cfced4);
+  &.warning
+  &.warning::before
+    content: '\f12a'
+    background: linear-gradient(to right, #ff8f35, #ffc149);
+  &.error
+  &.error::before
+    content: '\f00d'
+    background: linear-gradient(to right, #ff3838, #ff7849);
+  &.radiation::before
+    content: '\f7b9'
+  &.bug::before
+    content: '\f188'
+  &.idea::before
+    content: '\f0eb'
+  &.link::before
+    content: '\f0c1'
+  &.paperclip::before
+    content: '\f0c6'
+  &.todo::before
+    content: '\f0ae'
+  &.message::before
+    content: '\f4ad'
+  &.guide::before
+    content: '\f277'
+  &.download::before
+    content: '\f019'
+  &.up::before
+    content: '\f102'
+  &.undo::before
+    content: '\f2ea'
+  &.play::before
+    content: '\f144'
+  &.bell::before
+    content: '\f0f3'
+  &.poo::before
+    content: '\f2fe'
+  &.refresh::before
+    content: '\f021'
+  &.refresh::before
+    content: '\f021'
+  &.bell::before
+    content: '\f0f3'
+  &.cog::before
+    content: '\f013'
+
+  &.gradient1
+  &.gradient1:before
+    background: linear-gradient(to right, #93a5cf, #e4efe9);
+  &.gradient2
+  &.gradient2:before
+    background: linear-gradient(to right, #c471f5, #fa71cd);
+  &.gradient3
+  &.gradient3:before
+    background: linear-gradient(to right, #9795f0, #fbc8d4);

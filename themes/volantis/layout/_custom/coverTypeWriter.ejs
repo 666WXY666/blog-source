@@ -1,0 +1,16 @@
+<!--自定义首页cover打字机效果-->
+<br/>
+<div style="text-align: center;font-weight: bold" id="subtitle-style">
+    <span id="subtitle"></span>
+</div>
+<script src="/js/typed.js"></script>
+<script>
+    new Typed('#subtitle', {
+        strings: ['简单不先于复杂，而是在复杂之后!!!'],
+        loop: true, //开启循环
+        backDelay: 2000,
+        typeSpeed: 100,
+        backSpeed: 50,
+        cursorChar: '&nbsp;<i class="fa fa-heartbeat" id="myheartbeat"></i>' // 用于在在输出字符结尾闪烁的符号
+    });
+</script>

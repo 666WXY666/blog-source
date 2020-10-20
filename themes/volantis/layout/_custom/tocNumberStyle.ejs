@@ -1,0 +1,16 @@
+<!--自定义处理文章目录序号-->
+<script>
+    $("span[class='toc-number']").each(function(){
+        var value = $(this).text();
+        $(this).text(value.substring(0,value.length -1))
+    });
+</script>
+
+<style>
+    .l_side .toc-wrapper .toc-item .toc-link .toc-number:before{
+        content : '【'
+    }
+    .l_side .toc-wrapper .toc-item .toc-link .toc-number:after{
+        content : '】'
+    }
+</style>

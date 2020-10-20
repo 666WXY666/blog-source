@@ -1,0 +1,12 @@
+<!--自定义widgetHeader风格-->
+<% if (item.header) { %>
+    <header class="pure">
+        <div><i class="<%- item.header.icon %> fa-fw" aria-hidden="true"></i>&nbsp;<%- item.header.title %>
+        </div>
+        <% if (item.header.url && item.header.linkIcon) { %>
+            <a class="rightBtn" href='<%- item.header.url %>'>
+                <i class="<%- item.header.linkIcon %> fa-fw" aria-hidden="true"></i>
+            </a>
+        <% } %>
+    </header>
+<% } %>

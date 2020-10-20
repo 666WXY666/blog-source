@@ -1,0 +1,272 @@
+- group: 🌸 主题作者 + 文档 —— 没有不劳而获的工作，更没有坐享其成的收获
+  noteStyle: warning
+  icon: fas fa-user-tie
+  items:
+    - title: XAOXUU
+      avatar: https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/links/xaoxuu.png
+      url: https://xaoxuu.com/
+      backgroundColor: '#34A853'
+      textColor: '#fff'
+      keywords: [ios, 前端]
+    - title: Volantis
+      avatar: https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/links/volantis.png
+      url: https://volantis.js.org/
+      backgroundColor: '#008B8B'
+      textColor: '#fff'
+      keywords: [官方文档]
+
+- group: 🌤️ 技术大佬 —— 相逢一醉是前缘，风雨散、飘然何处
+  noteStyle: quote
+  icon: fas fa-desktop
+  items:
+    - title: Sanarous
+      avatar: https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/links/Sanarous.jpg
+      url: https://bestzuo.cn
+      backgroundColor: '#A03EC9'
+      textColor: '#fff'
+      keywords: [码农人生]
+    - title: 小康博客
+      avatar: https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/links/小康博客.jpg
+      url: https://www.antmoe.com/
+      backgroundColor: '#3E74C9'
+      textColor: '#fff'
+      keywords: [记录学习, 技术]
+    - title: 萌卜兔's
+      avatar: https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/links/萌卜兔.jpg
+      url: https://racns.com
+      backgroundColor: '#967ADC'
+      textColor: '#fff'
+      keywords: [前端]
+    - title: 杜老师说
+      avatar: https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/links/杜老师说.png
+      url: https://dusays.com
+      backgroundColor: '#34A853'
+      textColor: '#fff'
+      keywords: [运维工程师]
+    - title: 枋柚梓
+      avatar: https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/links/枋柚梓.jpg
+      url: https://inkss.cn
+      backgroundColor: '#FBBC05'
+      textColor: '#fff'
+      keywords: [繁星永存，记忆亘古不变]
+    - title: Colsrch
+      avatar: https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/links/Colsrch.jpg
+      url: https://colsrch.top
+      backgroundColor: '#7C5246'
+      textColor: '#fff'
+      keywords: [C/C++, MFC]
+    - title: 玖月技术
+      avatar: https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/links/玖月技术.png
+      url: https://www.9yue.pro
+      backgroundColor: '#708090'
+      textColor: '#fff'
+      keywords: [运维工程师]
+    - title: cungudafa
+      avatar: https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/links/cungudafa.png
+      url: https://cungudafa.top/
+      backgroundColor: '#E94335'
+      textColor: '#fff'
+      keywords: [前端]
+    - title: 阳光派Plus
+      avatar: https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/links/阳光派.jpg
+      url: https://www.zyoushuo.cn/
+      backgroundColor: '#3E74C9'
+      textColor: '#fff'
+      keywords: [Java, C++, Python]
+    - title: Heson
+      avatar: https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/links/heson.png
+      url: https://www.heson10.com
+      backgroundColor: '#967ADC'
+      textColor: '#fff'
+      keywords: [Hexo, 折腾, 生活]
+    - title: 一去二三遥
+      avatar: https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/links/一去二三遥.jpg
+      url: https://www.moonster.life
+      backgroundColor: '#008B8B'
+      textColor: '#fff'
+      keywords: [Java, C++]
+    - title: nomar
+      avatar: https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/links/nomar.jpg
+      url: https://www.nomar.cn
+      backgroundColor: '#A03EC9'
+      textColor: '#fff'
+      keywords: [技术记录分享]
+    - title: liuyib
+      avatar: https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/links/liuyib.jpg
+      url: https://liuyib.github.io/
+      backgroundColor: '#967ADC'
+      textColor: '#fff'
+      keywords: [前端]
+    - title: 框架师
+      avatar: https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/links/框架师.jpg
+      url: https://www.mobaijun.com
+      backgroundColor: '#708090'
+      textColor: '#fff'
+      keywords: [框架大佬]
+    - title: 过客~励む
+      avatar: https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/links/过客~励む.jpg
+      url: https://yafine-blog.cn
+      backgroundColor: '#E94335'
+      textColor: '#fff'
+      keywords: [Web, Java, 随笔]
+    - title: Uncle_drew
+      avatar: https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/links/Uncle_drew.png
+      url: https://cndrew.cn
+      backgroundColor: '#FBBC05'
+      textColor: '#fff'
+      keywords: [技术大佬]
+    - title: ZZONN
+      avatar: https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/links/ZZONN.gif
+      url: https://blog.zzonn.com/
+      backgroundColor: '#E94335'
+      textColor: '#fff'
+      keywords: [码农]
+    - title: 相逢的博客
+      avatar: https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/links/相逢的博客.jpg
+      url: https://www.xiangjunhong.com/
+      backgroundColor: '#708090'
+      textColor: '#fff'
+      keywords: [C++, 大学生]
+    - title: 水寒的博客
+      avatar: https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/links/水寒的博客.png
+      url: https://dp2px.com
+      backgroundColor: '#967ADC'
+      textColor: '#fff'
+      keywords: [Android, 前端]
+    - title: KeZunLin’s Blog
+      avatar: https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/links/KeZunLin’s_Blog.png
+      url: https://kezunlin.me
+      backgroundColor: '#008B8B'
+      textColor: '#fff'
+      keywords: [C++, Python]
+    - title: 北宸的博客
+      avatar: https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/links/北宸的博客.png
+      url: https://www.liaofuzhan.com
+      backgroundColor: '#FBBC05'
+      textColor: '#fff'
+      keywords: [因心造境，风云由我！]
+    - title: Ray’s Blog
+      avatar: https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/links/Ray’s_Blog.png
+      url: https://raycoder.me/
+      backgroundColor: '#7C5246'
+      textColor: '#fff'
+      keywords: [Python, Vue, 前端]
+    - title: hongCYu’s Blog
+      avatar: https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/links/hongCYu’s_Blog.jpg
+      url: https://hongcyu.cn
+      backgroundColor: '#34A853'
+      textColor: '#fff'
+      keywords: [Python, 测试]
+    - title: dna049
+      avatar: https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/links/dna049.png
+      url: https://dna049.com
+      backgroundColor: '#E94335'
+      textColor: '#fff'
+      keywords: [数学, 测试]
+    - title: LHJ’s Blog
+      avatar: https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/links/LHJ’s_Blog.jpg
+      url: https://longhujing.github.io
+      backgroundColor: '#008B8B'
+      textColor: '#fff'
+      keywords: [技术源于积累]
+    - title: 小丁的个人博客
+      avatar: https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/links/小丁的个人博客.png
+      url: https://tding.top
+      backgroundColor: '#708090'
+      textColor: '#fff'
+      keywords: [Python, SQL]
+    - title: 林深时见璐
+      avatar: https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/links/林深时见璐.png
+      url: https://linwhitehat.github.io
+      backgroundColor: '#FBBC05'
+      textColor: '#fff'
+      keywords: [记录生活]
+    - title: Bore’s Notes
+      avatar: https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/links/Bore’s_Notes.jpg
+      url: https://bore.vip
+      backgroundColor: '#967adc'
+      textColor: '#fff'
+      keywords: [记录生活]
+    - title: qinxs
+      avatar: https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/links/qinxs.png
+      url: https://7bxing.com
+      backgroundColor: '#E94335'
+      textColor: '#fff'
+      keywords: [技术总结, 各种折腾]
+    - title: BooLo
+      avatar: https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/links/BooLo.jpg
+      url: https://www.boolo.top
+      backgroundColor: '#7C5246'
+      textColor: '#fff'
+      keywords: [莫得标签]
+    - title: XTAO’s Tech Blog
+      avatar: https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/links/XTAO’s_Tech_Blog.jpg
+      url: https://guoxiaotao.xyz/
+      backgroundColor: '#A03EC9'
+      textColor: '#fff'
+      keywords: [C++, Robotics]
+    - title: Hunter’s Blog
+      avatar: https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/links/Hunter’s_Blog.jpg
+      url: https://hntr.xyz/
+      backgroundColor: '#141414'
+      textColor: '#fff'
+      keywords: [算法, 题解]
+    - title: Deecyn’s Blog
+      avatar: https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/links/Deecyn’s_Blog.png
+      url: https://deecyn.com/
+      backgroundColor: '#3E74C9'
+      textColor: '#fff'
+      keywords: [Java, 后端开发]
+    - title: FoxScallion
+      avatar: https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/links/FoxScallion.jpg
+      url: https://www.foxscallion.top/
+      backgroundColor: '#967ADC'
+      textColor: '#fff'
+      keywords: [Java, 后端]
+    - title: PaddyLin’s blog
+      avatar: https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/links/PaddyLin.jpg
+      url: https://www.paddylin.top
+      backgroundColor: '#708090'
+      textColor: '#fff'
+      keywords: [又菜又爱学]
+    - title: 极客猴
+      avatar: https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/links/极客猴.png
+      url: https://geekmonkey.top/
+      backgroundColor: '#38B7EA'
+      textColor: '#fff'
+      keywords: [Python, 数据分析, 认知]
+    - title: 若只如初见
+      avatar: https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/links/若只如初见.jpg
+      url: https://joyli.net.cn/
+      backgroundColor: '#FBBC05'
+      textColor: '#fff'
+      keywords: [JavaScript, 前端, node]
+
+- group: ✨ 虐狗博主 —— 你的春日好运正在派件，请保持心情舒畅
+  noteStyle: info
+  icon: fas fa-heartbeat
+  items:
+    - title: LOVE109❤️纪实小屋
+      avatar: https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/links/LOVE109.jpg
+      url: https://www.love109.cn/
+      backgroundColor: '#FF69B4'
+      textColor: '#fff'
+      keywords: [记录爱情❤️记录生活]
+    - title: 两个有意思的
+      avatar: https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/links/两个有意思的.png
+      url: https://dxq520.cn/
+      backgroundColor: '#FF69B4'
+      textColor: '#fff'
+      keywords: [记录爱情❤️记录生活]
+
+- group: ⚡ 危险区（该区站点保留7天至3个月不定）
+  noteStyle: error
+  icon: fas fa-exclamation-triangle
+  description: 如贵站在该区请检查贵站是否能正常访问或是否违背了本站友链原则（例：未开启https）
+  items:
+    - title: LarsCheng
+      avatar: https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/links/LarsCheng.png
+      url: https://www.larscheng.com/
+      backgroundColor: '#34A853'
+      textColor: '#fff'
+      keywords: [Java]
