@@ -36,7 +36,7 @@ script:
   - hexo generate
   - hexo d
 
-# 设置git提交名，邮箱；替换真实token到_config.yml文件，最后deploy部署
+# 设置git提交名，邮箱； 替换真实token到_config.yml文件，最后deploy部署
 after_script:
   - cd ./public
   - git init
