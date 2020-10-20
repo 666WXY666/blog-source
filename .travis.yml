@@ -3,7 +3,7 @@ language: node_js
 node_js:
   - 10 # use nodejs v10 LTS
 
-# 指定缓存模块，可选。缓存可加快编译速度。
+# 指定缓存模块，可选。 缓存可加快编译速度。
 cache:
   directories:
     - node_modules
