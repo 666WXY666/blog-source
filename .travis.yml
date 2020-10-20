@@ -19,7 +19,7 @@ env:
 # 指定博客分支
 branches:
   only:
-    - blog-source # build master branch only
+    - main # build master branch only
 
 before_install:
   - npm install -g hexo-cli
