@@ -175,7 +175,7 @@ encrypt:
   wrong_hash_message: 抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.
 
 # 博文压缩
-neat_enable: false
+neat_enable: true
 # 压缩html
 neat_html:
   enable: true
