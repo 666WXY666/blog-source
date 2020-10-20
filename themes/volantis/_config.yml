@@ -656,9 +656,9 @@ plugins:
     fade: 1500            # fade duration (ms) (Not more than 1500)
     images:               # For personal use only. At your own risk if used for commercial purposes !!!
       - https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/wallpaper/wallpaper4.jpg
-      - https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/wallpaper/wallpaper8.png
-      - https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/wallpaper/wallpaper5.png
-      - https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/wallpaper/wallpaper6.jpg
+#      - https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/wallpaper/wallpaper8.png
+#      - https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/wallpaper/wallpaper5.png
+#      - https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/wallpaper/wallpaper6.jpg
 #      - https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/wallpaper/wallpaper7.jpg
 
   # APlayer is only available in mainland China.
