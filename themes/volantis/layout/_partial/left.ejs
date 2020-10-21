@@ -126,17 +126,6 @@
 </div>
 
 <script>
-    $('#readmode').click(function () {
-        $('body').toggleClass('read-mode')
-    })
-
-    function SiderMenu() {
-        $('#main-container').toggleClass('open');
-        $('.iconflat').css('width', '50px').css('height', '50px');
-        $('.openNav').css('height', '50px');
-        $('#main-container,#mo-nav,.openNav').toggleClass('open')
-    }
-
     // 切换夜间模式方法
     function switchNightMode() {
         $('<div class="custom-dark-sky"><div class="custom-dark-planet"></div></div>').appendTo($("body")), setTimeout(
