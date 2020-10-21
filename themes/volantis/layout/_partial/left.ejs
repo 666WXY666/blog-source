@@ -171,9 +171,9 @@
             setTimeout(function () {
                 var isDarkOrLight = localStorage.getItem("user-color-scheme") || "light";
                 if (isDarkOrLight === 'dark') {
-                    setTimeout("$('html').addClass('dark-mode');$('.taiyang').css('display','none'),$('.yueliang').css('display','block')", 900), console.log('夜间模式开启'), $('#mode-icon').attr("xlink:href", "#icon-sun")
+                    setTimeout("$('html').addClass('dark-mode'),localStorage.setItem('user-color-scheme', 'dark'),$('.taiyang').css('display','none'),$('.yueliang').css('display','block')", 900), console.log('夜间模式开启'), $('#mode-icon').attr("xlink:href", "#icon-sun")
                 } else {
-                    setTimeout("$('html').removeClass('dark-mode');$('.yueliang').css('display','none'),$('.taiyang').css('display','block')", 900), console.log('夜间模式关闭'), $('#mode-icon').attr("xlink:href", "#icon-moon")
+                    setTimeout("$('html').removeClass('dark-mode'),localStorage.setItem('user-color-scheme', 'light'),$('.yueliang').css('display','none'),$('.taiyang').css('display','block')", 900), console.log('夜间模式关闭'), $('#mode-icon').attr("xlink:href", "#icon-moon")
                 }
                 ;
                 setTimeout(function () {
