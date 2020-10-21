@@ -54,9 +54,9 @@ navbar:
       #  icon: fas fa-ellipsis-v fa-spin
       icon: fas fa-fan fa-spin
       rows:
-        - name: 暗黑模式
-          icon: fas fa-moon
-          toggle: darkmode
+#        - name: 暗黑模式
+#          icon: fas fa-moon
+#          toggle: darkmode
         - name: 我的相册
           icon: fas fa-camera-retro faa-tada
           url: photos/
@@ -664,7 +664,7 @@ plugins:
   # APlayer is only available in mainland China.
   # APlayer config: https://github.com/metowolf/MetingJS
   aplayer:
-    enable: false
+    enable: true
     js:
       - https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js
       - https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js
