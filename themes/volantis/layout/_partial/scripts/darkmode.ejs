@@ -84,7 +84,7 @@ const toggleCustomDarkMode = () => {
 function bindToggleButton() {
 	// var btn=$("#wrapper .toggle-mode-btn");
     var btn=$(".toggle-mode-btn");
-    btn.on('click',(e) => {
+    btn.unbind('click').on('click',(e) => {
       const mode = toggleCustomDarkMode();
       applyCustomDarkModeSettings(mode);
     });
