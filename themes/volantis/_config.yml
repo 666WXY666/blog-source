@@ -734,7 +734,7 @@ plugins:
 rightmenu:
   enable: true
   # hr: 分割线, music: 音乐控制器  // , hr, music
-  layout: [comments, photos, links, hr, tools, catchTheCat]
+  layout: [comments, photos, links, hr, tools, catchTheCat, hr, music]
   # 可选功能项
   print:
     name: 打印页面
