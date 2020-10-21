@@ -82,7 +82,8 @@ const toggleCustomDarkMode = () => {
  * bind click event for toggle button
  */
 function bindToggleButton() {
-	var btn=$("#wrapper .toggle-mode-btn");
+	// var btn=$("#wrapper .toggle-mode-btn");
+    var btn=$(".toggle-mode-btn");
     btn.on('click',(e) => {
       const mode = toggleCustomDarkMode();
       applyCustomDarkModeSettings(mode);

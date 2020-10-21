@@ -82,9 +82,11 @@ function updateAPlayerControllerStatus() {
         if (APlayerController.player.audio.paused) {
             document.getElementsByClassName('nav toggle')[0].children[0].classList.add("fa-play");
             document.getElementsByClassName('nav toggle')[0].children[0].classList.remove("fa-pause");
+            $("#music-control-button").children("svg").removeClass("xuanzhun");
         } else {
             document.getElementsByClassName('nav toggle')[0].children[0].classList.remove("fa-play");
             document.getElementsByClassName('nav toggle')[0].children[0].classList.add("fa-pause");
+            $("#music-control-button").children("svg").addClass("xuanzhun");
         }
     } catch (error) {
         console.log(error);
