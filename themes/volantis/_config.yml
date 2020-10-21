@@ -1020,7 +1020,7 @@ crashCheat:
 # 共有四个可以选择: fireworks | explosion | love | text
 # default为
 cursorEffect:
-  enable: true
+  enable: false
   effect: explosion
 #是否开启彩色标签云，关闭则为主题默认样式
 tagColorCloud:
