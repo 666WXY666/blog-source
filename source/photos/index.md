@@ -91,6 +91,7 @@ sitemap: false
 {% span left logo h2 cyan, Interesting %}
 {% span small ,收集一些有意思的图片 %}
 {% gallery stretch, 4 %}
+![](https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/photos/nameless/19.jpg)
 ![](https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/photos/nameless/13.jpg)
 ![](https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/photos/nameless/14.jpg)
 ![](https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/photos/nameless/15.jpg)
