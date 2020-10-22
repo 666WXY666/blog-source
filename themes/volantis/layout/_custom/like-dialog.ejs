@@ -1,0 +1,539 @@
+<div id="panel" style="display: none">
+    <div class="mask" onclick="hidePanel()"></div>
+    <div class="container">
+        <div class="wrapper">
+            <div class="short-line">
+                <div></div>
+                <div></div>
+            </div>
+            <div class="main">
+                <div class="header">
+                    <div class="inner">赛钱箱</div>
+                </div>
+                <div class="body">
+                    <div class="swiper-wrapper">
+                        <ul id="swiper" class="swiper animate"
+                        >
+                            <li>
+                                <ul class="qrcode">
+                                    <li><h3>支付宝</h3><img
+                                                src="https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/reward/AliPayQR.png"
+                                                alt="支付宝">
+                                    </li>
+                                    <li><h3>微信</h3><img
+                                                src="https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/reward/WeChatQR.png"
+                                                alt="微信">
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="like"><p> 已有 <span id="lc-zan">0</span>
+                            人点赞了哦！ </p></div>
+                </div>
+                <div class="footer">
+                    <div onclick="handleAddZan()" id="footer-text">点赞一下 (◕ܫ◕)</div>
+                </div>
+            </div>
+            <div class="long-line">
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    #panel {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 1000;
+    }
+
+    #panel .mask {
+        background-color: hsla(0, 0%, 100%, .6);
+    }
+
+    #panel .container, #panel .mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    #panel .container {
+        pointer-events: none;
+        -webkit-perspective: 600px;
+        perspective: 600px;
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+        will-change: transform;
+        -webkit-animation: dropDown .9s ease-out 0s 1 normal forwards running;
+        animation: dropDown .9s ease-out 0s 1 normal forwards running;
+    }
+
+    #panel .wrapper {
+        width: 100vw;
+        height: 100vh;
+        will-change: transform;
+        -webkit-animation: dropWave 3s ease-out 0s 1 normal forwards running;
+        animation: dropWave 3s ease-out 0s 1 normal forwards running;
+    }
+
+    /* 面板下落动画 */
+    @keyframes dropDown {
+        0% {
+            transform: translateY(-100vh);
+        }
+        15% {
+            transform: translateY(0vh);
+        }
+        30% {
+            transform: translateY(-3vh);
+        }
+        45% {
+            transform: translateY(0vh);
+        }
+        60% {
+            transform: translateY(-1.5vh);
+        }
+        75% {
+            transform: translateY(0vh);
+        }
+        90% {
+            transform: translateY(-0.75vh);
+        }
+        100% {
+            transform: translateY(0vh);
+        }
+    }
+
+    /* 面板摇动动画 */
+    @keyframes dropWave {
+        0% {
+            transform: rotateY(45deg);
+        }
+        15% {
+            transform: rotateY(-5deg);
+        }
+        30% {
+            transform: rotateY(5deg);
+        }
+        45% {
+            transform: rotateY(-2.5deg);
+        }
+        60% {
+            transform: rotateY(2.5deg);
+        }
+        75% {
+            transform: rotateY(-1.25deg);
+        }
+        90% {
+            transform: rotateY(1.25deg);
+        }
+        100% {
+            transform: rotateY(0deg);
+        }
+    }
+
+    #panel .long-line, #panel .short-line {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 600px;
+        height: calc(50% - 180px);
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+
+    #panel .short-line div:first-child {
+        left: 55px;
+    }
+
+    #panel .short-line div:nth-child(2) {
+        right: 55px;
+    }
+
+    #panel .short-line div {
+        bottom: 0;
+    }
+
+    #panel .long-line div, #panel .short-line div {
+        position: absolute;
+        width: 2px;
+        height: 150%;
+        background-color: #5d3523;
+    }
+
+    #panel .main {
+        pointer-events: all;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 600px;
+        text-align: center;
+        border-radius: 12px;
+        -webkit-box-shadow: rgba(0, 0, 0, .2) 0 0 20px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    #panel .main .header {
+        width: 100%;
+        height: 50px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        border-radius: 12px 12px 0 0;
+        border-bottom: 1px solid #5d3523;
+        background-color: #fbf4f1;
+    }
+
+    #panel .main .header .inner {
+        margin: 0 auto;
+        width: 85%;
+        font-size: 20px;
+        line-height: 50px;
+        color: #5d3523;
+        letter-spacing: 1px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    #panel .main .body {
+        position: relative;
+        width: 100%;
+        height: 260px;
+        background-color: #fff;
+    }
+
+    #panel .main .body .swiper-wrapper {
+        width: 600px;
+        overflow: hidden;
+    }
+
+    #panel .main .body .swiper-wrapper .animate {
+        -webkit-transition: -webkit-transform .4s ease-in-out;
+        transition: -webkit-transform .4s ease-in-out;
+        transition: transform .4s ease-in-out;
+        transition: transform .4s ease-in-out, -webkit-transform .4s ease-in-out;
+    }
+
+    #panel .main .body .swiper-wrapper .swiper {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: 2400px;
+    }
+
+    #panel .main .body .swiper-wrapper ul {
+        list-style: none;
+    }
+
+    #panel .main .body .swiper-wrapper .swiper li {
+        width: 600px;
+    }
+
+    .qrcode {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: space-around;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .qrcode h3 {
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 2;
+    }
+
+    .qrcode img {
+        width: 150px;
+        height: 150px;
+        border-radius: 3px;
+    }
+
+    #panel .main .body .like {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 60px;
+        line-height: 60px;
+        font-size: 18px;
+    }
+
+    #panel .main .body .like span {
+        color: #b854d4;
+    }
+
+    #panel .main .footer {
+        position: relative;
+        width: 100%;
+        height: 50px;
+        border-radius: 0 0 12px 12px;
+        border-top: 1px solid #5d3523;
+        background-color: #fbf4f1;
+    }
+
+    #panel .main .footer div:hover:before {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    #panel .main .footer div, #panel .main .footer div:hover {
+        -webkit-box-shadow: #d68fe9 0 0 10px;
+        box-shadow: 0 0 10px #d68fe9;
+    }
+
+    #panel .main .footer div {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 200px;
+        height: 50px;
+        font-size: 16px;
+        color: #f5f5f5;
+        line-height: 48px;
+        letter-spacing: 2px;
+        overflow: hidden;
+        border-style: none;
+        border-radius: 30px;
+        background-color: #d68fe9;
+        -webkit-transform: translate(-50%, 50%);
+        transform: translate(-50%, 50%);
+        -webkit-transition: all .5s cubic-bezier(.86, -.02, .08, 1.02) 0s;
+        transition: all .5s cubic-bezier(.86, -.02, .08, 1.02) 0s;
+    }
+
+    #panel .main .footer div:before {
+        z-index: -1;
+        background-color: #b854d4;
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+        -webkit-transition: all .5s cubic-bezier(.86, -.02, .08, 1.02) 0s;
+        transition: all .5s cubic-bezier(.86, -.02, .08, 1.02) 0s;
+    }
+
+    #panel .main .footer div:after, #panel .main .footer div:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+    }
+
+    #panel .main .footer div:after {
+        content: attr(data-title);
+        color: #fff;
+        letter-spacing: 1px;
+    }
+
+    #panel .long-line, #panel .short-line {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 600px;
+        height: calc(50% - 180px);
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+
+    #panel .long-line div:first-child {
+        left: 25px;
+    }
+
+    #panel .long-line div:nth-child(2) {
+        right: 25px;
+    }
+
+    #panel .long-line div {
+        bottom: -25px;
+    }
+
+    #panel .long-line div, #panel .short-line div {
+        position: absolute;
+        width: 2px;
+        height: 150%;
+        background-color: #5d3523;
+    }
+
+    #panel .long-line div:after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: -4px;
+        bottom: -4px;
+        width: 10px;
+        height: 10px;
+        background-color: #5d3523;
+        border-radius: 50%;
+    }
+
+    #panel .long-line div:after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: -4px;
+        bottom: -4px;
+        width: 10px;
+        height: 10px;
+        background-color: #5d3523;
+        border-radius: 50%;
+    }
+</style>
+<script>
+    const LCZan = {
+        app_id: 'edgFHBe0UwpVmpd6rVLdhUAW-MdYXbMMI',
+        app_key: '3ynk7pEYdOXye74nQUn7DBY3',
+        custom_api_server: '',
+        flag: 0,
+
+        // 查询存储的记录
+        getRecord(Zan, url, title) {
+            return new Promise(function (resolve, reject) {
+                Zan('get', '/classes/Zan?where=' + encodeURIComponent(JSON.stringify({url})))
+                    .then(resp => resp.json())
+                    .then(({results, code, error}) => {
+                        if (code === 401) {
+                            throw error;
+                        }
+                        if (results && results.length > 0) {
+                            var record = results[0];
+                            resolve(record);
+                        } else {
+                            Zan('post', '/classes/Zan', {url, title: title, times: 0})
+                                .then(resp => resp.json())
+                                .then((record, error) => {
+                                    if (error) {
+                                        throw error;
+                                    }
+                                    resolve(record);
+                                }).catch(error => {
+                                console.error('Failed to create', error);
+                                reject(error);
+                            });
+                        }
+                    }).catch((error) => {
+                    console.error('LeanCloud Counter Error:', error);
+                    reject(error);
+                });
+            })
+        },
+
+        // 发起自增请求
+        increment(Zan, incrArr) {
+            return new Promise(function (resolve, reject) {
+                Zan('post', '/batch', {
+                    "requests": incrArr
+                }).then((res) => {
+                    res = res.json();
+                    if (res.error) {
+                        throw res.error;
+                    }
+                    resolve(res);
+                }).catch((error) => {
+                    console.error('Failed to save visitor count', error);
+                    reject(error);
+                });
+            });
+        },
+
+        // 构建自增请求体
+        buildIncrement(objectId) {
+            return {
+                "method": "PUT",
+                "path": `/1.1/classes/Zan/${objectId}`,
+                "body": {
+                    "times": {
+                        '__op': 'Increment',
+                        'amount': 1
+                    }
+                }
+            }
+        },
+
+        addZan(Zan) {
+            var enableIncr = window.location.hostname !== 'localhost';
+            enableIncr = true;
+            var getterArr = [];
+            var incrArr = [];
+            // 请求增加点赞数量
+            var zanCtn = document.querySelector('#lc-zan');
+            if (zanCtn || enableIncr) {
+                var zanGetter = this.getRecord(Zan, window.location.hostname + '/#lc-zan', 'Zan').then((record) => {
+                    $("#lc-zan").html(record.times);
+                    if (this.flag === 1) {
+                        incrArr.push(this.buildIncrement(record.objectId))
+                        $("#lc-zan").html(record.times + 1);
+                        $("#footer-text").html("谢谢点赞 (●'◡'●)")
+                        localStorage.setItem("isLikeSite", "true");
+                    }
+                });
+                getterArr.push(zanGetter);
+            }
+
+            // 如果启动计数自增，批量发起自增请求
+            if (enableIncr) {
+                Promise.all(getterArr).then(() => {
+                    incrArr.length > 0 && this.increment(Zan, incrArr);
+                })
+            }
+        },
+
+        fetchData(api_server) {
+            var Zan = (method, url, data) => {
+                return fetch(`${api_server}/1.1${url}`, {
+                    method,
+                    headers: {
+                        'X-LC-Id': this.app_id,
+                        'X-LC-Key': this.app_key,
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                });
+            };
+            this.addZan(Zan);
+        },
+
+        refreshZan() {
+            var api_server = this.app_id.slice(-9) !== '-MdYXbMMI' ? this.custom_api_server : `https://${this.app_id.slice(0, 8).toLowerCase()}.api.lncldglobal.com`;
+            if (api_server) {
+                this.fetchData(api_server);
+            } else {
+                fetch('https://app-router.leancloud.cn/2/route?appId=' + this.app_id)
+                    .then(resp => resp.json())
+                    .then(({api_server}) => {
+                        this.fetchData('https://' + api_server);
+                    });
+            }
+        }
+
+    };
+
+    LCZan.refreshZan();
+
+    function handleAddZan() {
+        LCZan.flag = 1
+        if (localStorage.getItem("isLikeSite") !== "true") {
+            LCZan.refreshZan();
+        }
+    }
+
+    // 关闭面板
+    function hidePanel() {
+        $("#panel").css("display", "none");
+    }
+</script>

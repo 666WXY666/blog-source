@@ -18,7 +18,9 @@
       <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
 
       <!-- 自定义左侧小菜单按钮 -->
-      <%- partial('_partial/left', null, {cache: !config.relative_link}) %>
+      <%- partial('_custom/left', null, {cache: !config.relative_link}) %>
+      <!-- 自定义弹窗 -->
+      <%- partial('_custom/like-dialog', null, {cache: !config.relative_link}) %>
 
       <a id="s-top" class="fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
     </div>
