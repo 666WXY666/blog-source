@@ -123,6 +123,8 @@ const IssuesAPI = {
             let issue = issues[j];
             let imgTag = '';
             if (issue.screenshot && issue.screenshot.length > 0) {
+              // 采用 thum.io 自动调取网站首页截图
+              // imgTag = '<div class="img"><img src="https://image.thum.io/get/width/1024/crop/768/' + issue.url + '" onerror="javascript:this.src=\'https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.jpg\';"/></div>';
               imgTag = '<div class="img"><img src="' + issue.screenshot + '" onerror="javascript:this.src=\'https://7.dusays.com/2020/09/13/7af712a493ed7.png\';"/></div>';
             } else {
               imgTag = '<div class="img"><img src="https://7.dusays.com/2020/09/13/7af712a493ed7.png"/></div>';
