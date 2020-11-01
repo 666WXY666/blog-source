@@ -75,7 +75,7 @@ navbar:
         - name: hr
         - name: 实用工具
           icon: fas fa-cog faa-tada
-          url: tools/
+          url: https://box.hasaik.com
         - name: 围住小猫
           icon: fas fa-cat faa-tada
           url: catchTheCat/
@@ -761,7 +761,7 @@ rightmenu:
   tools:
     name: 实用工具
     icon: fas fa-cog
-    url: tools/
+    url: https://box.hasaik.com
   catchTheCat:
     name: 围住小猫
     icon: fas fa-cat
