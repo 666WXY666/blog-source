@@ -126,6 +126,9 @@ var banUrl = theme.plugins.pjax.banUrl || [];
             <% if (theme.comments.service == 'disqus'){ %>
             pjax_disqus();
             <% } %>
+            <% if (theme.comments.service == 'twikoo'){ %>
+            pjax_twikoo();
+            <% } %>
         } catch (e) {
             console.log(e);
         }
