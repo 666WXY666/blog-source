@@ -2,6 +2,8 @@
 title: 基于HttpClient实现java中实现数据传输及文件传输
 pin: false
 toc: true
+thumbnail:
+  https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/article-thumbnail/java.png
 tags:
   - Java
   - 工具类
@@ -13,8 +15,6 @@ keywords:
   - HttpClient
   - 文件传输
   - 数据传输
-thumbnail: >-
-  https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/article-thumbnail/java.png
 description: 基于HttpClient实现java中实现数据传输及文件传输
 abbrlink: b85c80d5
 date: 2020-12-09 10:56:53
