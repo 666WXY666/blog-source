@@ -17,6 +17,7 @@ sitemap: false
 {% span left logo h2 cyan, 回味无穷，唇齿留香 %}
 {% span small ,美食，顾名思义就是美味的食物，各个地区也有自己喜爱的口味，比如上海等地喜酸甜，四川重庆喜麻辣，东北地区则口味和盐会重一点。随着生活水平的提高，食物也不在只是充饥了 。美食不仅仅是简单的味觉感受，更是一种精神享受。所以，在做美食这一块也是很重要的。 %}
 {% gallery stretch, 4 %}
+![一品焖锅](https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/photos/deliciousFood/35.jpg)
 ![来自剥虾的快乐](https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/photos/deliciousFood/34.jpg)
 ![和女朋友打卡韩式烤肉，这家烤肉超级超级好吃](https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/photos/deliciousFood/33.jpg)
 ![沈阳的厘米鸡真的好好吃，太幸福了嘻嘻。](https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogImages/photos/deliciousFood/1.jpg)
