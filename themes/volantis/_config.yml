@@ -5,7 +5,7 @@
 use_cdn: false
 info:
   theme_name: Volantis # This is theme's name.
-  theme_version: '4.1.4' # This is theme's version.
+  theme_version: '4.2.0' # This is theme's version.
   theme_docs: https://volantis.js.org/ # This is theme's URL.
   theme_repo: https://github.com/volantis-x/hexo-theme-volantis
   cdn:
@@ -314,12 +314,13 @@ comments:
   # MiniValine
   # https://github.com/MiniValine/MiniValine
   minivaline:
-    appId: gYcUzERw1BSKyARbzWH2OQzu-gzGzoHsz # your appId
-    appKey: 7xvFncnnyG2QI60iDY3E4PuO # your appKey
-    #js: https://cdn.jsdelivr.net/npm/minivaline@latest/dist/MiniValine.min.js
+    js: https://cdn.jsdelivr.net/npm/minivaline@latest
     path: # 全局评论地址
-    placeholder: 快来评论吧~  # 评论占位提示
-    mode: xCss # DesertsP or xCss
+    placeholder: 快来评论吧~  # 全局评论占位提示
+    # 更多选项 https://minivaline.js.org/docs/cn/#/Options 按照yml格式继续填写即可 （除了 [el] [pathname] [placeholder] 选项）  emoticonUrl可参考 https://github.com/MiniValine/hexo-next-minivaline
+    # mode: xCss # DesertsP or xCss
+
+
   # Disqus
   # https://disqus.com
   disqus:
@@ -576,8 +577,8 @@ plugins:
   # highlight.js
   highlightjs:
     enable: #true # Please set hexo.config.highlight.enable = false !!!
-    js: https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js
-    css: https://cdn.jsdelivr.net/npm/highlight.js@9.18.1/styles/solarized-light.css
+    js: https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js
+    css: https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css
     # more: https://www.jsdelivr.com/package/npm/highlight.js?path=styles
 
   # https://scrollrevealjs.org/api/reveal.html
