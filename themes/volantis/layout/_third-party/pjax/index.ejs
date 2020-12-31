@@ -92,7 +92,7 @@ var banUrl = theme.plugins.pjax.banUrl || [];
                 pjax_fancybox();
             }
             <% if (theme.plugins.backstretch.enable && theme.plugins.backstretch.images) { %>
-            Pjax_backstretch()
+                Pjax_backstretch()
             <% } %>
             <% if (theme.plugins.highlightjs.enable) { %>
             document.querySelectorAll('pre code').forEach((block) => {
@@ -100,18 +100,16 @@ var banUrl = theme.plugins.pjax.banUrl || [];
             });
             <% } %>
             <% if (theme.plugins.scrollreveal.enable) { %>
-            pjax_scrollrebeal();
+                pjax_scrollrebeal();
             <% } %>
-            <% if (theme.plugins.issues.enable) { %>
             if (typeof IssuesAPI == "undefined") {
                 loadIssuesJS();
             }
-            <% } %>
             <% if (theme.plugins.clipboard.enable && (theme.custom_css.body.highlight.copy_btn == true)) { %>
-            pjax_initCopyCode();
+                pjax_initCopyCode();
             <% } %>
             <% if (theme.comments.service == 'valine'){ %>
-            pjax_valine();
+               pjax_valine();
             <% } %>
             <% if (theme.comments.service == 'minivaline'){ %>
                 if (typeof MiniValine == "undefined") {
@@ -121,25 +119,32 @@ var banUrl = theme.plugins.pjax.banUrl || [];
                 }
             <% } %>
             <% if (theme.comments.service == 'gitalk'){ %>
-            pjax_gitalk();
+                pjax_gitalk();
             <% } %>
             <% if (theme.comments.service == 'disqus'){ %>
-            pjax_disqus();
+                pjax_disqus();
             <% } %>
             <% if (theme.comments.service == 'twikoo'){ %>
-            pjax_twikoo();
+                if (typeof twikoo == "undefined") {
+                    load_twikoo();
+                } else {
+                    pjax_twikoo();
+                }
+            <% } %>
+            <% if (theme.comments.service == 'waline'){ %>
+                pjax_waline();
             <% } %>
         } catch (e) {
             console.log(e);
         }
         <% if (theme.plugins.pjax.animation){ %>
-        window.HideLoading();
+            window.HideLoading();
         <% } %>
     });
 
     document.addEventListener('pjax:error', function (e) {
         <% if (theme.plugins.pjax.animation){ %>
-        window.HideLoading();
+            window.HideLoading();
         <% } %>
         window.location.href = e.triggerElement.href;
     });

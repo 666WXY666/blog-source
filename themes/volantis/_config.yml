@@ -207,7 +207,8 @@ article:
     meta_library:
       # 文章标题
       title: # 暂无配置
-      # 默认文章作者（可在 front-matter 中覆盖）
+      # 默认文章作者（可在 _data/author.yaml 中增加其他作者，并在 front-matter 中设置）
+      # https://volantis.js.org/advanced-settings/#多人协同
       author:
         avatar: https://hasaik.com/images/avatar.jpg
         name: 'Mr. X'
@@ -259,17 +260,18 @@ article:
 comments:
   title: <i class='fas fa-comments'></i> 用户交流区
   subtitle: '温馨提示: 遵纪守法, 友善评论!'
-  service: valine # valine, minivaline, disqus, gitalk, vssue, livere, isso, twikoo
+  service: valine # valine, minivaline, disqus, gitalk, vssue, livere, isso, twikoo, waline
   # Valine
   # https://valine.js.org/
   valine:
-    appId: gYcUzERw1BSKyARbzWH2OQzu-gzGzoHsz # your appId
-    appKey: 7xvFncnnyG2QI60iDY3E4PuO # your appKey
     js: https://cdn.jsdelivr.net/gh/XuxuGood/cdn@master/blogJs/Valine.min.js
     path:  # 全局评论地址
     placeholder: 粘贴图片到此处可以自动上传，填写邮箱可以收到邮件回复哦(●'◡'●)
-    meta: nick,mail,link # valine comment header info
-    requiredFields: ['nick','mail']
+    # 其他配置项按照yml格式继续填写即可 除了 [el path placeholder emojiCDN emojiMaps] 选项
+    appId: gYcUzERw1BSKyARbzWH2OQzu-gzGzoHsz # your appId
+    appKey: 7xvFncnnyG2QI60iDY3E4PuO # your appKey
+    meta: [nick,mail,link] # valine comment header info
+    requiredFields: [nick,mail]
     enableQQ: true # Unstable avatar link
     recordIP: false # Record commenter IP
     avatar: monsterid # gravatar style https://valine.js.org/avatar
@@ -278,7 +280,8 @@ comments:
     highlight: true
     visitor: true
     mathJax: false
-    tagMeta: '博主,小伙伴,访客' # 标签要显示的文字,默认'博主,小伙伴,访客'
+    tagMeta: [博主,小伙伴,访客] # 标签要显示的文字,默认'博主,小伙伴,访客'
+    metaPlaceholder: {nick: "昵称/QQ号(必填)", mail: "邮箱（必填，完全保密）", link: "网址(https://)"}
     master: #md5加密后的博主邮箱
       - 6a565e6c47127afdd40d5d46089db2c5
     friends: #md5加密后的小伙伴邮箱
@@ -318,9 +321,10 @@ comments:
     path: # 全局评论地址
     placeholder: 快来评论吧~  # 全局评论占位提示
     # 更多选项 https://minivaline.js.org/docs/cn/#/Options 按照yml格式继续填写即可 （除了 [el] [pathname] [placeholder] 选项）  emoticonUrl可参考 https://github.com/MiniValine/hexo-next-minivaline
-    # mode: xCss # DesertsP or xCss
-
-
+    # emoticonUrl 等列表选项 可参考 https://github.com/MiniValine/hexo-next-minivaline
+    # 下面是一个例子：
+    backend: waline
+    serverURL: https://waline.vercel.app
   # Disqus
   # https://disqus.com
   disqus:
@@ -331,6 +335,7 @@ comments:
   # Gitalk
   # https://gitalk.github.io/
   gitalk:
+    # 配置项按照yml格式继续填写即可 除了 [id distractionFreeMode] 选项
     clientID:
     clientSecret:
     repo:
@@ -360,8 +365,25 @@ comments:
   # Twikoo
   # https://twikoo.js.org/
   twikoo:
-    js: #https://cdn.jsdelivr.net/npm/twikoo@0.3.0/dist/twikoo.all.min.js   (本地为twikoo v0.3.0版本)
+    js: https://cdn.jsdelivr.net/npm/twikoo@latest # 建议锁定版本
+    path: # 全局评论地址
+    # 其他配置项按照yml格式继续填写即可 除了 [el path] 选项
     envId: xxxxxxxxxxxxxxx # 腾讯云环境id
+  # Waline
+  # https://waline.js.org/
+  waline:
+    js: https://cdn.jsdelivr.net/npm/@waline/client@latest
+    path: # 全局评论地址
+    placeholder: 快来评论吧~  # 评论占位提示
+    imageHosting: https://7bu.top/api/upload # 图床api（默认使用去不图床）
+    # 其他配置项按照yml格式继续填写即可 除了 [el path placeholder uploadImage] 选项
+    meta: [nick,mail,link] # waline comment header info
+    requiredFields: [nick,mail]
+    serverURL: xxxxxxxxxxxxxxx # Waline 的服务端地址（必填） 测试用地址: https://waline-ruddy.vercel.app
+    avatar: robohash # gravatar style https://waline.js.org/client/basic.html#avatar
+    pageSize: 10 # 评论每页显示数量
+    lang: zh-CN
+
 ############################### Comments ############################### > end
 
 
@@ -668,6 +690,7 @@ plugins:
   # 除appID和appKEY外均为选填项
   artitalk:
     # Set `layout: artitalk` to enable in page
+    # 配置项按照yml格式继续填写即可
     appId: 7XJ5WS3tFNeRmmfpvNC3WCwG-MdYXbMMI # your appID
     appKey: wNDj3jzJ4f6CEahsFbjiVyn5 # your appKEY
     # serverURL:  #leancloud绑定的安全域名，使用国际版的话不需要填写
@@ -682,13 +705,10 @@ plugins:
     color3: '#fff' #说说字体颜色
     # cssUrl: #自定义css接口
 
-  # 从 issues 加载动态数据
-  # {% issues sites/timeline/friends | api=xxx | group=key:a,b,c %}
-  # 例如：
+# 从 issues 加载动态数据
+    #  # {% issues sites/timeline/friends | api=xxx | group=key:a,b,c %}
+    #  # 例如：
   # {% issues sites | api=https://api.github.com/repos/volantis-x/examples/issues?sort=updated&state=open&page=1&per_page=100 | group=version:latest,v6,v5,v4,v3,v2,v1,v0 %}
-  issues:
-    enable: true
-    js:
 
   # 暗黑模式 darkmode
   # 样式：source/css/_plugins/dark.styl
@@ -699,6 +719,12 @@ plugins:
   darkmodejs:
     enable: true
 
+  # 旧版 Internet Explorer 淘汰行动
+  # https://support.dmeng.net/kill-old-versions-of-ie.html
+  # 本主题不支持Internet Explorer的任何版本!!!
+  killOldVersionsOfIE:
+    enable: true
+    action: alert # jump: 升级提示跳转 alert: 升级提示弹窗
 ############################### Plugins ############################### > end
 
 ############################### Rightmenu ############################### > start

@@ -19,8 +19,6 @@ var Debounce = (fn, t) =>{
 };
 
 (function($) {
-
-	"use strict";
 	// 将jQuery对象缓存起来 永远不要让相同的选择器在你的代码里出现多次
 	// 在jQuery中最快的选择器是ID选择器,尽量使用ID代替Class 时间上大约相差100倍
 	// 在class前使用tag(标签名)
@@ -261,9 +259,8 @@ var Debounce = (fn, t) =>{
 				if (event.keyCode == 9) {
 					return false;
 				} else {
-					var isie = (document.all) ? true: false;
-					var key;
-					var ev;
+					var isie = !!document.all;
+					var key,ev;
 					if (isie) { //IE浏览器
 						key = window.event.keyCode;
 						ev = window.event;

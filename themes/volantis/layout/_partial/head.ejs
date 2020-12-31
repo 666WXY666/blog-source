@@ -125,6 +125,8 @@
 
     <script id="loadcss"></script>
 
+    <%- partial('../_third-party/killOldVersionsOfIE/script') %>
+
     <!--全局引入自定义通知类element通知样式-->
     <% if (theme.messageNotify.enable) { %>
         <link rel="stylesheet" href="/css/message.css" type="text/css"/>
